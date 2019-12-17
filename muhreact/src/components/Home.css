@@ -36,6 +36,10 @@ body {
     align-content: center;
     margin: auto;
     text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .fleft {
     float: left;
@@ -53,4 +57,7 @@ body {
 }
 .spacer {
     padding: 5px;
+}
+.spacer1 {
+    margin-top: 5px;
 }

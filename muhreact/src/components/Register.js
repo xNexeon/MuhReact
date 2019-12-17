@@ -22,6 +22,7 @@ function Register() {
           <br />
           <input type="password" className="form-control formcontrol1" placeholder="Make it complicated!"></input>
           <br />
+          <button className="btn btn-danger spacer1">Register</button>
 
           
 
