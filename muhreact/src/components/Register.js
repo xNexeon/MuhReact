@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 function Register() {
   return (
@@ -23,6 +24,10 @@ function Register() {
           <input type="password" className="form-control formcontrol1" placeholder="Make it complicated!"></input>
           <br />
           <button className="btn btn-danger spacer1">Register</button>
+          <br />
+            <Link to="/Login">
+          <p className="spacer">Login Instead</p>
+            </Link>
 
           
 
