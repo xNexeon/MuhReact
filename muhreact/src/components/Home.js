@@ -2,6 +2,17 @@ import React from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+
+function initializeAndLogin() {
+  const client = Stitch.initializeDefaultAppClient('zforum-pvpwj');
+  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
+    console.log('Connected to Stitch Sucessfully')
+  });
+}
+window.onload = initializeAndLogin;
+
+
 
 function Home() {
   return (
