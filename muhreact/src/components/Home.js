@@ -3,14 +3,10 @@ import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
+import ConnectMongo from './mongo'
+import InsertDoc from './InsertDoc'
 
-function initializeAndLogin() {
-  const client = Stitch.initializeDefaultAppClient('zforum-pvpwj');
-  client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
-    console.log('Connected to Stitch Sucessfully')
-  });
-}
-window.onload = initializeAndLogin;
+window.onload = (ConnectMongo)
 
 
 
@@ -26,6 +22,7 @@ function Home() {
         <Link to="/Register">
       <button className="btn btn-danger">Register</button>
         </Link>
+        <button onCLick={InsertDoc} className="btn btn-danger">Test</button>
       </div>
     </div>
   );
