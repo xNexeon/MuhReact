@@ -8,6 +8,8 @@ import Register from './components/Register'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Login from './components/Login'
+import Main from './components/Main'
+
 
 
 ReactDOM.render((
@@ -17,6 +19,7 @@ ReactDOM.render((
         <Route path="/" exact component={Home} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
+        <Route path="/main" exact component={Main} />
       </Switch>
         </BrowserRouter>
     </div>

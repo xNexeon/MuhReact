@@ -2,10 +2,20 @@ import React from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import fire from './config/fire';
+import Main from './Main';
+import Home from './Home'
 
-function Register() {
-  return (
-    <div className="form">
+
+class Register extends React.Component{
+
+
+
+
+
+  render() {
+    return(
+      <div className="form">
       <h1>Register</h1>
       <div>
          <br />
@@ -34,7 +44,9 @@ function Register() {
         </form>
       </div>
     </div>
-  );
+    )
+  }
 }
+
 
 export default Register;

@@ -1,37 +1,18 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import fire from './config/fire';
+import Main from './Main';
+import Home from './Home'
 
 
 
 class Login extends Component {
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      email: '',
-      password: '',
-    }
-  }
-
-  HandleEmailChange = (event) => {
-    this.setState({
-      email: event.target.value
-    })
-  }
-
-  HandlePassChange = (event) => {
-    this.setState({
-      pass: event.target.value
-    })
-  }
+  
 
 
- 
-
- 
   render() {
     return(
       <div className="form">
@@ -41,8 +22,8 @@ class Login extends Component {
         <form className="form-group"> 
           <label>Your Details</label>
           <br />
-          <input type="text" value={this.state.email} onChange={this.HandleEmailChange} className="form-control formcontrolLong" id="formGroupExampleInput" placeholder="Email"></input>
-          <input type="password" value={this.state.password} onChange={this.HandlePassChange} className="form-control formcontrolLong" placeholder="Password"></input>
+          <input type="text"  className="form-control formcontrolLong" id="formGroupExampleInput" placeholder="Email"></input>
+          <input type="password"  className="form-control formcontrolLong" placeholder="Password"></input>
           <br />
           <button className="btn btn-danger spacer1">Log In</button>
           <br />

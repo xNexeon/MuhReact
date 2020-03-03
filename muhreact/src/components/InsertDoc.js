@@ -10,12 +10,12 @@ const Items = {
     password: '12345678'
 };
 
-//const itemsCollection = mongodb.db("User").collection("Accounts");
+const itemsCollection = 'User.Accounts';
 
 function InsertDoc() {
-//    itemsCollection.insertOne(Items)
-//    .then(result => console.log(`Successfully inserted item with _id: ${result.insertedId}`))
-//    .catch(err => console.error(`Failed to insert item: ${err}`))
+    itemsCollection.insertOne(Items)
+    .then(result => console.log(`Successfully inserted item with _id: ${result.insertedId}`))
+    .catch(err => console.error(`Failed to insert item: ${err}`))
   }
   
   
